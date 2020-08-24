@@ -42,33 +42,33 @@ export default function Footer(props) {
     } else {
       AutographaStore.disablediff = false;
     }
-    for (let i = 0; i < AutographaStore.chunkGroup.length; i++) {
-      let vId = "v" + (i + 1);
-      translationContent.push(
-        document.getElementById(vId).textContent.toString()
-      );
-    }
+    // for (let i = 0; i < AutographaStore.chunkGroup.length; i++) {
+    //   let vId = "v" + (i + 1);
+    //   translationContent.push(
+    //     document.getElementById(vId).textContent.toString()
+    //   );
+    // }
     AutographaStore.translationContent = translationContent;
     AutographaStore.layout = key;
     AutographaStore.layoutContent = key;
     AutographaStore.aId = key;
-    refDb
-      .get("targetReferenceLayout")
-      .then(function (doc) {
-        refDb.put({
-          _id: "targetReferenceLayout",
-          layout: key,
-          _rev: doc._rev,
-        });
-      })
-      .catch(function (err) {
-        refDb
-          .put({
-            _id: "targetReferenceLayout",
-            layout: key,
-          })
-          .catch(function (err) {});
-      });
+    // refDb
+    //   .get("targetReferenceLayout")
+    //   .then(function (doc) {
+    //     refDb.put({
+    //       _id: "targetReferenceLayout",
+    //       layout: key,
+    //       _rev: doc._rev,
+    //     });
+    //   })
+    //   .catch(function (err) {
+    //     refDb
+    //       .put({
+    //         _id: "targetReferenceLayout",
+    //         layout: key,
+    //       })
+    //       .catch(function (err) {});
+    //   });
   };
 
   return (

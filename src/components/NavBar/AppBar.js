@@ -20,6 +20,7 @@ import TranslationHelp from "../TranslationHelp/TranslationHelp";
 import Download from "../Download/Download";
 import Sync from "../Sync/Sync";
 import { Observer } from "mobx-react";
+import Footer from "../Footer/Footer";
 const db = require(`${__dirname}/../../core/data-provider`).targetDb();
 
 const useStyles = makeStyles((theme) => ({
@@ -119,6 +120,7 @@ export default function PrimarySearchAppBar() {
             </AppBar>
           </div>
           <SetUp />
+          <Footer />
         </React.Fragment>
       )}
     </Observer>

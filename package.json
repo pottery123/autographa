@@ -18,6 +18,11 @@
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
+		"core-js": "^3.6.5",
+		"debounce": "1.2.0",
+		"emotion": "10.0.17",
+		"json-transforms": "1.1.2",
+		"lodash": "4.17.15",
 		"axios": "^0.19.2",
 		"clsx": "1.1.1",
 		"diff-match-patch": "^1.0.5",
@@ -39,7 +44,13 @@
 		"rtl-detect": "1.0.0",
 		"string-punctuation-tokenizer": "^2.0.2",
 		"sweetalert": "2.1.2",
-		"xml2js": "^0.4.23"
+		"xml2js": "^0.4.23",
+		"typescript": "^3.9.7",
+		"react-styleguidist": "^10.4.2",
+		"slate": "0.57.1",
+		"slate-hyperscript": "0.57.1",
+		"slate-react": "0.57.1",
+		"usfm-js": "2.0.1"
 	},
 	"build": {
 		"extends": "react-cra",
