@@ -6,6 +6,7 @@ import {
   Select,
 } from "@material-ui/core";
 import * as React from "react";
+import PropTypes from "prop-types";
 import { MarkdownViewer } from "./MarkdownViewer";
 import { CreateProjectStyles } from "./useStyles/CreateProjectStyles";
 
@@ -62,4 +63,11 @@ export const LicenseSelection = ({ openmdviewer, setopenmdviewer }) => {
       />
     </>
   );
+};
+
+
+LicenseSelection.propTypes = {
+  classes: PropTypes.object,
+  openmdviewer: PropTypes.bool.isRequired,
+  setopenmdviewer: PropTypes.func.isRequired,
 };

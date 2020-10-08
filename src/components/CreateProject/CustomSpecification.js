@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -170,7 +171,6 @@ export default function CustomSpecification({
           err
         ) {
           localForage.getItem("custonSpec", function (err, value) {
-            console.log("saved in storage db", value);
             if (err)
               logger.error(
                 `customspecification.js, failed to update db with customSpecvalues on save`
@@ -287,3 +287,15 @@ export default function CustomSpecification({
     </div>
   );
 }
+
+CustomSpecification.propTypes = {
+  classes: PropTypes.object,
+  opencustom: PropTypes.bool.isRequired,
+  setCustonOpen: PropTypes.func.isRequired,
+  allbooks: PropTypes.array,
+  setContent: PropTypes.func.isRequired,
+  canonSpecification: PropTypes.string,
+  updateCanonItems: PropTypes.array.isRequired,
+  setUpdateCanonItems: PropTypes.func.isRequired,
+  setcanonSpecification: PropTypes.func.isRequired,
+};

@@ -1,5 +1,5 @@
-// @flow
 import * as React from "react";
+import PropTypes from "prop-types";
 // import ReactMarkdown from "react-markdown";
 import { BlockEditable } from "markdown-translatable/dist/components";
 import {
@@ -141,21 +141,6 @@ export const MarkdownViewer = ({
                 />
               </div>
             )}
-            {/* <Button
-            variant="contained"
-            color="primary"
-            onClick={() => setpreview(!preview)}
-          >
-            {!preview ? "Markdown" : "Preview (HTML EDIT)"}
-          </Button> */}
-            {/* <ReactMarkdown source={translation} /> */}
-
-            {/* <BlockTranslatable
-          
-            translation={translation}
-            preview={preview}
-            onTranslation={(translation) => settranslation(translation)}
-          /> */}
           </DialogContent>
           <DialogActions>
             <Button autoFocus onClick={handleClose} variant="contained">
@@ -174,4 +159,10 @@ export const MarkdownViewer = ({
       </div>
     </div>
   );
+};
+
+MarkdownViewer.propTypes = {
+  classes: PropTypes.object,
+  MarkdownViewer: PropTypes.bool,
+  setopenmdviewer: PropTypes.func,
 };
