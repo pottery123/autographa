@@ -7,7 +7,7 @@ function InputBar({ title }) {
 
   return (
     <div>
-      <h4 className="text-sm font-base ml-3 mb-2 text-primary ">{title}</h4>
+      <h4 className="text-xs font-base mb-2 ml-3 text-primary  tracking-wide leading-4  font-light">{title}</h4>
       <div className=" flex justify-between h-10 w-96 border-2 bg-white  border-gray-300  rounded-md">
         <input
           type="text"
